@@ -32,12 +32,12 @@ public class MatrixTransposition {
         return new int[lines][rows];
     }
 
-    public static int[][] transposeMatrix(int[][] matrix){
-        int[][] temp = new int[matrix[0].length][matrix.length];
+    public static int[][] transposeMatrix(int[][] matrix) {
+        int[][] result = new int[matrix[0].length][matrix.length];
         for (int i = 0; i < matrix.length; i++)
             for (int j = 0; j < matrix[0].length; j++)
-                temp[j][i] = matrix[i][j];
-        return temp;
+                result[j][i] = matrix[i][j];
+        return result;
     }
 
     public static void printMatrix(int[][] matrix) {
@@ -52,7 +52,7 @@ public class MatrixTransposition {
     public static void fillMatrix(int[][] matrix, int min, int max) {
         for (int i = 0; i < matrix.length; i++) {
             for (int j = 0; j < matrix[0].length; j++) {
-                matrix[i][j] = generateNumber( min, max);
+                matrix[i][j] = generateNumber(min, max);
             }
         }
     }
